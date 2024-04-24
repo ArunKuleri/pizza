@@ -109,6 +109,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                               .read<AuthenticationBloc>()
                               .userRepository),
                           child: SignInScreen(),
+                        ),
+                        BlocProvider<SignInBloc>(
+                          create: (context) => SignInBloc(context
+                              .read<AuthenticationBloc>()
+                              .userRepository),
                         )
                       ]))
                     ],
