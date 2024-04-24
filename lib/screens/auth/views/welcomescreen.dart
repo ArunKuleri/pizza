@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pizzaapp/blocs/authentication_bloc/authentication_bloc.dart';
+import 'package:pizzaapp/screens/auth/views/sign_up_screen.dart';
 
 import '../blocs/SignInBloc/sign_in_bloc.dart';
 import 'sign_in_screen.dart';
@@ -33,7 +34,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(20, -1.2),
+                alignment: const AlignmentDirectional(20, -1.2),
                 child: Container(
                   height: MediaQuery.of(context).size.width,
                   width: MediaQuery.of(context).size.width,
@@ -43,7 +44,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(2.7, -1.2),
+                alignment: const AlignmentDirectional(2.7, -1.2),
                 child: Container(
                   height: MediaQuery.of(context).size.width / 1.3,
                   width: MediaQuery.of(context).size.width / 1.3,
@@ -53,7 +54,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(2.7, -1.2),
+                alignment: const AlignmentDirectional(2.7, -1.2),
                 child: Container(
                   height: MediaQuery.of(context).size.width / 1.3,
                   width: MediaQuery.of(context).size.width / 1.3,
@@ -73,7 +74,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 50.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 50.0),
                         child: TabBar(
                             controller: tabController,
                             unselectedLabelColor: Theme.of(context)
@@ -82,7 +83,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                                 .withOpacity(0.5),
                             labelColor:
                                 Theme.of(context).colorScheme.onBackground,
-                            tabs: [
+                            tabs: const [
                               Padding(
                                 padding: EdgeInsets.all(12.0),
                                 child: Text(
@@ -108,12 +109,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                           create: (context) => SignInBloc(context
                               .read<AuthenticationBloc>()
                               .userRepository),
-                          child: SignInScreen(),
+                          child: const SignInScreen(),
                         ),
                         BlocProvider<SignInBloc>(
                           create: (context) => SignInBloc(context
                               .read<AuthenticationBloc>()
                               .userRepository),
+                          child: const SignUpScreen(),
                         )
                       ]))
                     ],
