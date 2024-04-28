@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:user_repository/src/entities/entities.dart';
-import 'package:user_repository/src/models/models.dart';
+
+import 'package:user_repository/src/user_repository.dart';
 
 import 'user_repo.dart';
 

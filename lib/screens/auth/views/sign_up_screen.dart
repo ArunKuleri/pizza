@@ -166,21 +166,21 @@ class _SignupScreenState extends State<SignUpScreen> {
                       style: TextStyle(
                           color: containsUpperCase
                               ? Colors.green
-                              : Theme.of(context).colorScheme.onBackground),
+                              : Theme.of(context).colorScheme.onSurface),
                     ),
                     Text(
                       " 1 lowercase",
                       style: TextStyle(
                           color: containsLowerCase
                               ? Colors.green
-                              : Theme.of(context).colorScheme.onBackground),
+                              : Theme.of(context).colorScheme.onSurface),
                     ),
                     Text(
                       " 1 number",
                       style: TextStyle(
                           color: containsNumber
                               ? Colors.green
-                              : Theme.of(context).colorScheme.onBackground),
+                              : Theme.of(context).colorScheme.onSurface),
                     ),
                   ],
                 ),
@@ -194,14 +194,14 @@ class _SignupScreenState extends State<SignUpScreen> {
                   style: TextStyle(
                       color: containsSpecialChar
                           ? Colors.green
-                          : Theme.of(context).colorScheme.onBackground),
+                          : Theme.of(context).colorScheme.onSurface),
                 ),
                 Text(
                   "8 minimum character",
                   style: TextStyle(
                       color: contains8Length
                           ? Colors.green
-                          : Theme.of(context).colorScheme.onBackground),
+                          : Theme.of(context).colorScheme.onSurface),
                 ),
               ],
             ),
